@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnA8_H2nvgZtV4frlbG1Vm8bG1Pd0g0w&callback=initMap"
+  type="text/javascript"></script>
+  <style type="text/css">
+
+    #map {
+        width: 1000px;
+        height: 400px;
+     }
+  </style>
+
+  <script type="text/javascript">
+
+      x = navigator.geolocation;
+
+      x.getCurrentPosition(success, failure);
+
+      function success(position)
+
+      {
+        var myLat = position.coords.latitude;
+        var myLong = position.coords.longitude;
+
+        //alert(myLat);
+
+        var coords = new google.maps.LatLng(myLat,myLong);
+
+        var mapOptions = {
+
+          zoom:11,
+          center: coords,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        var marker = new google.maps.Marker({map:map, position:coords});  
+      }
+
+      function failure(){ }
+
+  </script>
+
+
+
+<style>
+a{
+  text-decoration-line: none;
+  color: white;
+}
+
+.column {
+  float: left;
+  width: 10.33%;
+  padding: 5px;
+}
+.column1{
+  float: right;
+  width:10%;
+  padding-top: 40px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.rowend{
+  background-color: #040832;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.r1{
+  font-size: 30px;
+  color: #90B3B4;
+  padding-top: 40px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+
+}
+.r2{
+  color:white;
+}
+.map1{
+  padding: 20px;
+  align-items:center;
+}
+.spacing{
+  background-color: #040832;
+  padding: 40px;
+}
+</style>
+</head>
+<body style="margin: 0%">
+<div class="row", style="background-color: #040832">
+  <div class="column">
+    <img src="dc-Cover-uohupaskenruf4m1sdr3qvf9f1-20180807010205.Medi.jpeg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="1200px-NBC_LOGO.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="column1">
+  <a href="https://www.nbcbearings.com/">
+    Home</a> 
+  </div>
+  <div class="column1"><a href="https://www.nbcbearings.com/corporate.php">Corporate</a>
+  </div>
+  <div class="column1"><a href="https://www.nbcbearings.com/global-footprint.php"> Global Footprint </a>
+  </div>
+  <div class="column1"><a href="https://www.nbcbearings.com/product.php"> Products</a>
+  </div>
+  <div class="column1"><a href="https://www.nbcbearings.com/business-excellence.php">Business Excellence</a> 
+  </div>
+  <div class="column1">
+  <a href="https://www.nbcbearings.com/our-people.php">Our People</a>
+  </div>
+  <div class="column1">
+  <a href="https://www.nbcbearings.com/contact-us.php">Contact Us</a>
+  </div>
+</div>
+<div class="row2">
+  <h1 align="center">TRUCK TRACKER</h1>
+</div>
+<div align="center">
+<div class="map1">
+<div id="map"></div></div></div>
+<div class="rowend">
+<table style="width:100%">
+  <tr>
+    <td class="r1"><b>Corprate</b></td>
+    <td class="r1"><b>Global Footprint</b></td> 
+    <td class="r1"><b>Products</b></td>
+    <td class="r1"><b>Business Excelence</b></td>
+    <td class="r1"><b>Our People</b></td>
+  </tr>
+  <tr>
+    <td class="r2">AboutNBC</td>
+    <td class="r2">International Network</td>
+    <td class="r2">Ball Bearings</td>
+    <td class="r2">Research & Development Excellence</td>
+    <td class="r2">
+      Great Place To Work
+    </td>
+  </tr>
+   <tr>
+    <td class="r2">Milestones</td>
+    <td class="r2">Chief Dealers</td>
+    <td class="r2">Taper Roller Bearings</td>
+    <td class="r2">Manufacturing Excellence</td>
+    <td class="r2">
+      Employee Development
+    </td>
+  </tr>
+   <tr>
+    <td class="r2">Our Team</td>
+    <td class="r2">Join NBC Network</td>
+    <td class="r2">Cylindrical Roller Bearings</td>
+    <td class="r2">Customer Excellence</td>
+    <td class="r2">
+      Join Us
+    </td>
+  </tr>
+</table>
+</div>
+<div class="spacing"></div>
+</body>
+</html>
